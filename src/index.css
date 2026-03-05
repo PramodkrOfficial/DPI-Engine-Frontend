@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #060a0f;
+  --bg2: #0c1117;
+  --bg3: #111820;
+  --border: #1e2d3d;
+  --border2: #243344;
+  --accent: #00d4ff;
+  --accent2: #0099cc;
+  --accent3: #00ff9d;
+  --danger: #ff3b5c;
+  --warn: #ffb938;
+  --text: #e2eaf4;
+  --text2: #7a95b0;
+  --text3: #4a6070;
+  --card: rgba(12, 17, 23, 0.8);
+  --glow: 0 0 20px rgba(0, 212, 255, 0.15);
+  --glow-strong: 0 0 40px rgba(0, 212, 255, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+code, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent2);
+}
+
+/* Grid noise background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}

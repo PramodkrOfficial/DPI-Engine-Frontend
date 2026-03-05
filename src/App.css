@@ -1,0 +1,22 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: 260px;
+  padding: 32px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    margin-left: 0;
+    padding: 16px;
+    padding-top: 80px;
+  }
+}
